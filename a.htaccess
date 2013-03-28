@@ -1,0 +1,4 @@
+Options +FollowSymlinks
+ RewriteEngine on
+ rewritecond %{http_host} ^domain.com [nc]
+ rewriterule ^(.*)$ http://andersc.github.com/www/index$1 [r=301,nc]
