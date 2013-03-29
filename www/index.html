@@ -30,6 +30,23 @@ var manifest_url = "andersc.github.com/manifest.webapp";
  }
  </script>
  
+ <script>
+  function installTwo()
+  {
+var manifestLocation = "http://andersc.github.com/manifest.webapp"; // your domain here
+var installRequest = navigator.mozApps.install(manifestLocation);
+
+installRequest.onsuccess = function(data) {
+    // App installed successfully!
+};
+
+installRequest.onerror = function(err) {
+    // App couldn't be installed!
+    console.log("Install error!");
+};
+}
+ </script>
+ <!---
 <script>
 function install()
 {
@@ -45,9 +62,9 @@ request.onerror = function () {
   alert('Install failed, error: ' + this.error.name);
 };
 }
-</script>
+</script> --->
 
-<button onclick="install()">Install</button>
+<button onclick="installTwo()">Install</button>
 
 </br>
 </head>
