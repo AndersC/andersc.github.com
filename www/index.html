@@ -24,7 +24,7 @@ JANBANAN SLANGE
 <body>
  
 <!-- Lets make a simple snake game -->
-<canvas id="canvas" width=300px height=300px/>
+<canvas id="canvas" width=600px height=600px/>
 
  
  <!-- GAME SCRIPT --->
@@ -59,7 +59,7 @@ $(document).ready(function(){
 		//Lets move the snake now using a timer which will trigger the paint function
 		//every 60ms
 		if(typeof game_loop != "undefined") clearInterval(game_loop);
-		game_loop = setInterval(paint, 60);
+		game_loop = setInterval(paint, 130);
 	}
 	init();
 	
@@ -202,20 +202,20 @@ var handleOrientationEvent = function( frontToBack, leftToRight, rotateDegrees )
     //do something amazing
 	
 	// Positive = snake goes down - 20 diff
-	if(frontToBack > 30 && d != "up") {
+	if(frontToBack > 20 && d != "up") {
 	d = "down";
 	//alert("down");
 	}
-	else if (frontToBack < -30 && d != "down") {
+	else if (frontToBack < -20 && d != "down") {
 	d = "up"; // UP!!
 	//alert("up");
 	}
 	// Positive = snake goes right
-	else if (leftToRight > 30 && d != "left") {
+	else if (leftToRight > 20 && d != "left") {
 	d = "right";
 	//alert("right");
 	}
-	else if (leftToRight < -30 && d != "right") {
+	else if (leftToRight < -20 && d != "right") {
 	d = "left";
 	//alert("left");
 	}
