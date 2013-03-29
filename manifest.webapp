@@ -1,17 +1,16 @@
 {
-  "name": "Snake - TG13",
-  "description": "Snake...",
+  "version": "0.2",
+  "name": "AndersC",
+  "description": "Snake for Firefox OS",
   "launch_path": "/",
   "icons": {
-    "128": "/img/icon-128.png"
+    "128": "img/icon-128.png"
   },
   "developer": {
-    "name": "AndersC",
-    "url": "andersc.github.com"
+    "name": "Anders C @ TG",
+    "url": "www.vg.no"
   },
+  "installs_allowed_from": ["*"],
+  "locales": {},
   "default_locale": "en"
-  
-   "installs_allowed_from": [
-  	"*"
-  ]
 }
