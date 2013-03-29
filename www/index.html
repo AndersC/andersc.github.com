@@ -178,7 +178,7 @@ $(document).ready(function(){
 		}
 		return false;
 	}
-	
+	/*
 	// --- Phone rotations  ---
 	// Gamma = LEFT RIGHT (- = LEFT | + = RIGHT )
 	// Beta = BOTTOM TOP   (- = BOTTOM  | + = TOP)
@@ -208,6 +208,40 @@ var handleOrientationEvent = function( frontToBack, leftToRight, rotateDegrees )
 };
 
 // --- END ROTATIONS ---
+	*/
+	
+	// NEW ROTATE TYPE.
+	 function handleOrientationEvent(event) {
+
+        var x = event.beta ? event.beta : event.y * 90;
+        var y = event.gamma ? event.gamma : event.x * 90;
+
+        window.console && console.info('Raw position: x, y: ', x, y);
+
+        if (!initialX && !initialY) {
+
+            initialX = x;
+            initialY = y;
+
+        } else {
+
+            var positionX = initialX - x;
+            var positionY = initialY - y;
+
+			// 
+			if(y < 0 && d != "up") d = "down";
+			else if (y > 0 && d != "down") d = "up";
+			// Positive = snake goes right
+			else if (x > 0 && d != "left") d = "right";
+			else if (x < 0 && d != "right") d = "left";
+            //ball.style.top = (90 + positionX * 5) + 'px';
+            //ball.style.left = (90 + positionY * 5) + 'px';
+        }
+    }
+// Webkit en Mozilla variant beide registreren. ( for mozilla? better registration)
+    window.addEventListener("MozOrientation", handleOrientationEvent, true);
+    window.addEventListener("deviceorientation", handleOrientationEvent, true);
+	
 	
 	//Lets add the keyboard controls now
 	$(document).keydown(function(e){
