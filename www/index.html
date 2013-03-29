@@ -16,7 +16,7 @@ JANBANAN SLANGE
 
 <!-- INSTALL STUFF -->
 <script>
-var manifest_url = "andersc.github.com/manifest.json";
+var manifest_url = "andersc.github.com/manifest.webapp";
 </script>
 
 <!--- <button onclick="window.navigator.mozApps.install(manifest_url); return false;">
@@ -24,9 +24,17 @@ var manifest_url = "andersc.github.com/manifest.json";
 </button> --->
 
 <script>
-function Install()
+ function myFunction()
+ {
+ alert("Hello World!");
+ }
+ </script>
+ 
+<script>
+function install()
 {
-var request = window.navigator.mozApps.install(manifestUrl);
+alert('Button pressed');
+var request = window.navigator.mozApps.install(andersc.github.com/manifest.webapp);
 request.onsuccess = function () {
   // Save the App object that is returned
   var appRecord = this.result;
@@ -39,7 +47,7 @@ request.onerror = function () {
 }
 </script>
 
-<button onclick="Install()">Install</button>
+<button onclick="install()">Install</button>
 
 </br>
 </head>
@@ -52,6 +60,9 @@ request.onerror = function () {
  alert("My First JavaScript");
  </script>
  
+ 
+ 
+ <!-- GAME SCRIPT --->
  <script>$(document).ready(function(){
 $(document).ready(function(){
 	//Canvas stuff
