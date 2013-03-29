@@ -1,27 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8"/>
-<title>
-JANBANAN SLANGE
-</title>
-
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"/>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"/>
-<script src="js/jquery.js"></script>
-<script src="js/script.js"></script>
-</head>
-<body>
-<!-- Lets make a simple snake game -->
-<canvas id="canvas" width="450" height="450"/>
-<!-- Jquery -->
-
-<script>
- alert("My First JavaScript");
- </script>
- 
- <script>$(document).ready(function(){
+<script>$(document).ready(function(){
 $(document).ready(function(){
 	//Canvas stuff
 	var canvas = $("#canvas")[0];
@@ -184,7 +161,3 @@ $(document).ready(function(){
 	
 })
 });</script>
-
-
-</body>
-</html>
