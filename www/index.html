@@ -7,26 +7,6 @@ JANBANAN SLANGE
 </title>
 <header>
 <!-- <link rel="stylesheet" type="text/css" href="stysle.css">-->
-<style>
- #ball {
-            background-color: green;
-            position: relative;
-            width: 20px;
-            height: 20px;
-            left: 90px;
-            top: 90px;
-
-            border-radius: 20px;
-            -moz-border-radius: 20px;
-
-            box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
-            -moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
-            -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
-
-            background-image: -moz-linear-gradient(top, rgba(255, 255, 255, .5), rgba(255, 255, 255, 0) 12px);
-            background-image: -webkit-gradient(linear, 0 0, 0 12, from(rgba(255, 255, 255, .5)), to(rgba(255, 255, 255, 0)));
-        }
-</style>
 
 </header>
 
@@ -68,10 +48,7 @@ $(document).ready(function(){
 	
 	function init()
 	{
-	// BALLS
-	var initialX = null;
-    var initialY = null;
-    var ball = document.getElementById('ball');
+	
 	
 		d = "right"; //default direction
 		create_snake();
@@ -225,11 +202,19 @@ var handleOrientationEvent = function( frontToBack, leftToRight, rotateDegrees )
     //do something amazing
 	
 	// Positive = snake goes down - 30 diff
-	if(frontToBack > 110 && d != "up") d = "down";
-	else if (frontToBack > 50 && d != "down") d = "up";
+	if(frontToBack > 110 && d != "up") {
+	d = "down";
+	}
+	else if (frontToBack < 50 && d != "down") {
+	d = "up";
+	}
 	// Positive = snake goes right
-	else if (leftToRight > 20 && d != "left") d = "right";
-	else if (leftToRight < -20 && d != "right") d = "left";
+	else if (leftToRight > 20 && d != "left") {
+	d = "right";
+	}
+	else if (leftToRight < 20 && d != "right") {
+	d = "left";
+	}
 	//The snake is now touch controllable (hopefully!)
 };
 
