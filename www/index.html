@@ -235,11 +235,11 @@ var handleOrientationEvent = function( frontToBack, leftToRight, rotateDegrees )
             var positionY = initialY - y;
 
 			// 
-			if(y < 0 && d != "up") d = "down";
-			else if (y > 0 && d != "down") d = "up";
+			if(y < 20 && d != "up") d = "down";
+			else if (y > -20 && d != "down") d = "up";
 			// Positive = snake goes right
-			else if (x > 0 && d != "left") d = "right";
-			else if (x < 0 && d != "right") d = "left";
+			else if (x > 20 && d != "left") d = "right";
+			else if (x < -20 && d != "right") d = "left";
             //ball.style.top = (90 + positionX * 5) + 'px';
             //ball.style.left = (90 + positionY * 5) + 'px';
         }
