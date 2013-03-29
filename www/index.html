@@ -13,50 +13,8 @@ JANBANAN SLANGE
 <script src="js/jquery.js"></script>
 <script src="js/script.js"></script>
 
+<a href="install.html">Install Page</a> 
 
-<!-- INSTALL STUFF -->
-<script>
-var manifest_url = "andersc.github.com/manifest.webapp";
-</script>
-
-<!--- <button onclick="window.navigator.mozApps.install(manifest_url); return false;">
-  TG2013 installer
-</button> --->
-
-<script>
- function myFunction()
- {
- alert("Hello World!");
- }
- </script>
- 
-	<script>
-			function install() {
-				var request = navigator.mozApps.install("http://andersc.github.com/manifest.webapp/manifest.webapp");
-				request.onerror = function() { alert("Something went wrong: " + this.error.message); }
-				return false;
-			}
-			document.getElementById('install').onsubmit = install;
-		</script>
- <!---
-<script>
-function install()
-{
-alert('Button pressed');
-var request = window.navigator.mozApps.install(http://andersc.github.com/manifest.webapp);
-request.onsuccess = function () {
-  // Save the App object that is returned
-  var appRecord = this.result;
-  alert('Installation successful!');
-};
-request.onerror = function () {
-  // Display the error information from the DOMError object
-  alert('Install failed, error: ' + this.error.name);
-};
-}
-</script> --->
-
-<button onclick="install)">Install</button>
 
 </br>
 </head>
