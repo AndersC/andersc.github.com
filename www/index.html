@@ -193,8 +193,7 @@ $(document).ready(function(){
     var leftToRight = event.gamma;
     //beta: front back motion
     var frontToBack = event.beta;
-                  
-    handleOrientationEvent( frontToBack, leftToRight, rotateDegrees );
+    window.setTimeout(handleOrientationEvent( frontToBack, leftToRight, rotateDegrees )),1000);
     }, false);
 }
  
