@@ -211,6 +211,12 @@ var handleOrientationEvent = function( frontToBack, leftToRight, rotateDegrees )
 	*/
 	
 	// NEW ROTATE TYPE.
+	<script>
+
+    var initialX = null;
+    var initialY = null;
+
+    var ball = document.getElementById('ball');
 	 function handleOrientationEvent(event) {
 
         var x = event.beta ? event.beta : event.y * 90;
