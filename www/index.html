@@ -198,12 +198,12 @@ $(document).ready(function(){
 var handleOrientationEvent = function( frontToBack, leftToRight, rotateDegrees ){
     //do something amazing
 	
-	// Positive = snake goes down - 10 diff
-	if(frontToBack > 100 && d != "up") d = "down";
-	else if (frontToBack < 80 && d != "down") d = "up";
+	// Positive = snake goes down - 20 diff
+	if(frontToBack > 110 && d != "up") d = "down";
+	else if (frontToBack < 70 && d != "down") d = "up";
 	// Positive = snake goes right
-	else if (leftToRight > 10 && d != "left") d = "right";
-	else if (leftToRight < -10 && d != "right") d = "left";
+	else if (leftToRight > 20 && d != "left") d = "right";
+	else if (leftToRight < -20 && d != "right") d = "left";
 	//The snake is now touch controllable (hopefully!)
 };
 
