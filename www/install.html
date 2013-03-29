@@ -29,7 +29,7 @@ var manifest_url = "andersc.github.com/manifest.webapp";
  </br>
 	<script>
 			function install() {
-				alert("Button!");
+				
 				var request = navigator.mozApps.install("http://andersc.github.com/manifest.webapp");
 				request.onerror = function() { alert("Something went wrong: " + this.error.message); }
 				return false;
