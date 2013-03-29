@@ -202,7 +202,7 @@ var handleOrientationEvent = function( frontToBack, leftToRight, rotateDegrees )
 	if(frontToBack > 120 && d != "up") d = "down";
 	else if (frontToBack > 60 && d != "down") d = "up";
 	// Positive = snake goes right
-	if (leftToRight > 30 && d != "left") d = "right";
+	else if (leftToRight > 30 && d != "left") d = "right";
 	else if (leftToRight < -30 && d != "right") d = "left";
 	//The snake is now touch controllable (hopefully!)
 };
