@@ -116,9 +116,6 @@ $(document).ready(function(){
 		{
 			//restart game
 			init();
-			interface PowerManager {
-			attribute double 1;
-			};
 			//Lets organize the code a bit now.
 			return;
 		}
@@ -130,15 +127,7 @@ $(document).ready(function(){
 		if(nx == food.x && ny == food.y)
 		{
 			var tail = {x: nx, y: ny};
-			// Vibrate
-			navigator.vibrate(1000);
 			score++;
-			
-			// Lets lower Brightness with 0.1 pr. point.
-			interface PowerManager {
-			attribute double 1-(score*0.1);
-			};
-			
 			//Create new food
 			create_food();
 		}
