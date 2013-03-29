@@ -129,7 +129,7 @@ $(document).ready(function(){
 			var tail = {x: nx, y: ny};
 			score++;
 			// Vibrate
-			navigator.vibrate(500);
+			//navigator.vibrate(500);
 			
 			// Lets lower Brightness with 0.1 pr. point.
 			
@@ -202,11 +202,11 @@ var handleOrientationEvent = function( frontToBack, leftToRight, rotateDegrees )
     //do something amazing
 	
 	// Positive = snake goes down - 20 diff
-	if(frontToBack > 110 && d != "up") {
+	if(frontToBack > 30 && d != "up") {
 	d = "down";
 	//alert("down");
 	}
-	else if (frontToBack < 50 && d != "down") {
+	else if (frontToBack < -30 && d != "down") {
 	d = "down"; // UP!!
 	//alert("up");
 	}
