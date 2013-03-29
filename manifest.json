@@ -10,4 +10,8 @@
     "url": "andersc.github.com"
   },
   "default_locale": "en"
+  
+   "installs_allowed_from": [
+  	"*"
+  ]
 }

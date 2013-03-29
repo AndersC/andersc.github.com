@@ -19,11 +19,29 @@ JANBANAN SLANGE
 var manifest_url = "andersc.github.com/manifest.json";
 </script>
 
-<button onclick="navigator.mozApps.install(manifest_url); return false;">
+<!--- <button onclick="window.navigator.mozApps.install(manifest_url); return false;">
   TG2013 installer
-</button>
-</br>
+</button> --->
 
+<script>
+function Install()
+{
+var request = window.navigator.mozApps.install(manifestUrl);
+request.onsuccess = function () {
+  // Save the App object that is returned
+  var appRecord = this.result;
+  alert('Installation successful!');
+};
+request.onerror = function () {
+  // Display the error information from the DOMError object
+  alert('Install failed, error: ' + this.error.name);
+};
+}
+</script>
+
+<button onclick="Install()">Install</button>
+
+</br>
 </head>
 <body>
 <!-- Lets make a simple snake game -->
