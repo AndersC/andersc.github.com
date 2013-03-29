@@ -204,7 +204,7 @@ $(document).ready(function(){
 		}
 		return false;
 	}
-	/*
+	
 	// --- Phone rotations  ---
 	// Gamma = LEFT RIGHT (- = LEFT | + = RIGHT )
 	// Beta = BOTTOM TOP   (- = BOTTOM  | + = TOP)
@@ -225,21 +225,21 @@ var handleOrientationEvent = function( frontToBack, leftToRight, rotateDegrees )
     //do something amazing
 	
 	// Positive = snake goes down - 30 diff
-	if(frontToBack > 120 && d != "up") d = "down";
-	else if (frontToBack > 60 && d != "down") d = "up";
+	if(frontToBack > 110 && d != "up") d = "down";
+	else if (frontToBack > 50 && d != "down") d = "up";
 	// Positive = snake goes right
-	else if (leftToRight > 30 && d != "left") d = "right";
-	else if (leftToRight < -30 && d != "right") d = "left";
+	else if (leftToRight > 20 && d != "left") d = "right";
+	else if (leftToRight < -20 && d != "right") d = "left";
 	//The snake is now touch controllable (hopefully!)
 };
 
 // --- END ROTATIONS ---
-	*/
+	
 	
 	// NEW ROTATE TYPE.
 	
 
-   
+  /* 
 	 function handleOrientationEvent(event) {
 
         var x = event.beta ? event.beta : event.y * 90;
@@ -272,6 +272,7 @@ var handleOrientationEvent = function( frontToBack, leftToRight, rotateDegrees )
     window.addEventListener("MozOrientation", handleOrientationEvent, true);
     window.addEventListener("deviceorientation", handleOrientationEvent, true);
 	
+	*/
 	
 	//Lets add the keyboard controls now
 	$(document).keydown(function(e){
