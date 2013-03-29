@@ -6,27 +6,7 @@
 JANBANAN SLANGE
 </title>
 <header>
-	<style>
-	#ball {
-            background-color: green;
-            position: relative;
-            width: 20px;
-            height: 20px;
-            left: 90px;
-            top: 90px;
-
-            border-radius: 20px;
-            -moz-border-radius: 20px;
-
-            box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
-            -moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
-            -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
-
-            background-image: -moz-linear-gradient(top, rgba(255, 255, 255, .5), rgba(255, 255, 255, 0) 12px);
-            background-image: -webkit-gradient(linear, 0 0, 0 12, from(rgba(255, 255, 255, .5)), to(rgba(255, 255, 255, 0)));
-        }
-
-	</style>
+<link rel="stylesheet" type="text/css" href="stysle.css">
 </header>
 
  
@@ -44,7 +24,7 @@ JANBANAN SLANGE
  
 <!-- Lets make a simple snake game -->
 <canvas id="canvas" width=300px height=300px/>
-<div id="ball"></div>
+
  
  <!-- GAME SCRIPT --->
  <script>
@@ -67,8 +47,6 @@ $(document).ready(function(){
 	
 	function init()
 	{
-	var initialX = null;
-    var initialY = null;
 		d = "right"; //default direction
 		create_snake();
 		create_food(); //Now we can see the food particle
@@ -233,9 +211,10 @@ var handleOrientationEvent = function( frontToBack, leftToRight, rotateDegrees )
 	*/
 	
 	// NEW ROTATE TYPE.
+	
 
-
-    
+    var initialX = null;
+    var initialY = null;
 
     var ball = document.getElementById('ball');
 	 function handleOrientationEvent(event) {
@@ -249,8 +228,9 @@ var handleOrientationEvent = function( frontToBack, leftToRight, rotateDegrees )
 
             initialX = x;
             initialY = y;
+alert(x);
         } else {
-
+ 
 
             var positionX = initialX - x;
             var positionY = initialY - y;
