@@ -18,13 +18,12 @@ JANBANAN SLANGE
 
 <a href="install.html">Install Page</a> 
 
-
 </br>
 </head>
 <body>
 <!-- Lets make a simple snake game -->
 <canvas id="canvas" width=300px height=300px/>
-<!-- Jquery -->
+
 
  
  
@@ -181,6 +180,36 @@ $(document).ready(function(){
 		}
 		return false;
 	}
+	
+	// --- Phone rotations  ---
+	// Gamma = LEFT RIGHT (- = LEFT | + = RIGHT )
+	// Beta = BOTTOM TOP   (- = BOTTOM  | + = TOP)
+	if (window.DeviceOrientationEvent) {
+    window.addEventListener("deviceorientation", function( event ) {
+    //alpha: rotation around z-axis
+    var rotateDegrees = event.alpha;
+    //gamma: left to right
+    var leftToRight = event.gamma;
+    //beta: front back motion
+    var frontToBack = event.beta;
+                  
+    handleOrientationEvent( frontToBack, leftToRight, rotateDegrees );
+    }, false);
+}
+ 
+var handleOrientationEvent = function( frontToBack, leftToRight, rotateDegrees ){
+    //do something amazing
+	
+	// Positive = snake goes down
+	if(frontToBack > 0 && d != "up") d = "down";
+	else if (frontToBack < 0 && d != "down") d = "up";
+	// Positive = snake goes right
+	else if (leftToRight > 0 && d != "left") d = "right";
+	else if (leftToRight < 0 && d != "right") d = "left";
+	//The snake is now touch controllable (hopefully!)
+};
+
+// --- END ROTATIONS ---
 	
 	//Lets add the keyboard controls now
 	$(document).keydown(function(e){
