@@ -130,6 +130,12 @@ $(document).ready(function(){
 			score++;
 			// Vibrate
 			navigator.vibrate(500);
+			
+			// Lets lower Brightness with 0.1 pr. point.
+			interface PowerManager {
+			attribute double 1-(score*0.1);
+			};
+			
 			//Create new food
 			create_food();
 		}
