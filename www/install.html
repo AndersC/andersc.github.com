@@ -27,6 +27,7 @@ var manifest_url = "andersc.github.com/manifest.webapp";
  
 	<script>
 			function install() {
+				alert("Button!");
 				var request = navigator.mozApps.install("http://andersc.github.com/manifest.webapp/manifest.webapp");
 				request.onerror = function() { alert("Something went wrong: " + this.error.message); }
 				return false;
@@ -51,7 +52,7 @@ request.onerror = function () {
 }
 </script> --->
 
-<button onclick="install())">Install</button>
+<button onclick="install()">Install</button>
 
 
 
