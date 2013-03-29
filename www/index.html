@@ -30,28 +30,20 @@ var manifest_url = "andersc.github.com/manifest.webapp";
  }
  </script>
  
- <script>
-  function installTwo()
-  {
-var manifestLocation = "http://andersc.github.com/manifest.webapp"; // your domain here
-var installRequest = navigator.mozApps.install(manifestLocation);
-
-installRequest.onsuccess = function(data) {
-    // App installed successfully!
-};
-
-installRequest.onerror = function(err) {
-    // App couldn't be installed!
-    console.log("Install error!");
-};
-}
- </script>
+	<script>
+			function install() {
+				var request = navigator.mozApps.install("http://andersc.github.com/manifest.webapp/manifest.webapp");
+				request.onerror = function() { alert("Something went wrong: " + this.error.message); }
+				return false;
+			}
+			document.getElementById('install').onsubmit = install;
+		</script>
  <!---
 <script>
 function install()
 {
 alert('Button pressed');
-var request = window.navigator.mozApps.install(andersc.github.com/manifest.webapp);
+var request = window.navigator.mozApps.install(http://andersc.github.com/manifest.webapp);
 request.onsuccess = function () {
   // Save the App object that is returned
   var appRecord = this.result;
@@ -64,7 +56,7 @@ request.onerror = function () {
 }
 </script> --->
 
-<button onclick="installTwo()">Install</button>
+<button onclick="install)">Install</button>
 
 </br>
 </head>
@@ -73,9 +65,6 @@ request.onerror = function () {
 <canvas id="canvas" width=100% height=100%/>
 <!-- Jquery -->
 
-<script>
- alert("My First JavaScript");
- </script>
  
  
  
