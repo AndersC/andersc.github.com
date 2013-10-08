@@ -1,13 +1,18 @@
-Snake spill som bruker piltaster eller bevegelsessensorer for å flytte på snake.
+WIP - Anders C Homepage
 
-I firefox OS er kontrollene motsatt av en eller annen grunn, jeg fikk ikke tid til å orde dette.
-(funker fint på Android telefoner)
-Screenorientation lock er heller ikke på plass for ffos.
+// ---------- GAMMELT --------------
+
+
+Snake spill som bruker piltaster eller bevegelsessensorer for ï¿½ flytte pï¿½ snake.
+
+I firefox OS er kontrollene motsatt av en eller annen grunn, jeg fikk ikke tid til ï¿½ orde dette.
+(funker fint pï¿½ Android telefoner)
+Screenorientation lock er heller ikke pï¿½ plass for ffos.
 
 Programmet kan installeres for offline bruk.
 
-Må installeres på ffos for å bli kjørt. 
-Funker uten installasjon på android.
+Mï¿½ installeres pï¿½ ffos for ï¿½ bli kjï¿½rt. 
+Funker uten installasjon pï¿½ android.
 
 
 Tutorials brukt:
