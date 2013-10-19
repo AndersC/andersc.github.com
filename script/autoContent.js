@@ -1,7 +1,7 @@
-    $(function(){
-      $("#footer").load("footer.html"); 
-    });
-	
-	 $(function(){
-      $("#navigation").load("navigation.html"); 
-    });
+$(function() {
+    $("#footer").load("http://andersc.github.io/htmlPages/footer.html");
+});
+
+$(function() {
+    $("#navigation").load("http://andersc.github.io/htmlPages/navigation.html");
+});
