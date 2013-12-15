@@ -1,6 +1,5 @@
 
 function init () {
-	alert('autoContent loaded');
 $(function() {
     $("#footer").load("http://andersc.github.io/htmlPages/footer.html");
 });
