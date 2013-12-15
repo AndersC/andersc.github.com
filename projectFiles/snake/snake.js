@@ -10,12 +10,15 @@ $(document).ready(function(){
 	var d;
 	var food;
 	var score;
+	var game_speed;
 	
-	//Lets create the snake now
+	//Lets create the snake(s) now
 	var snake_array; //an array of cells to make up the snake
+	//var snake_array; //an array of cells to make up the snake
 	
 	function init()
-	{
+	{	
+		game_speed = 60;
 		d = "right"; //default direction
 		create_snake();
 		create_food(); //Now we can see the food particle
@@ -25,7 +28,7 @@ $(document).ready(function(){
 		//Lets move the snake now using a timer which will trigger the paint function
 		//every 60ms
 		if(typeof game_loop != "undefined") clearInterval(game_loop);
-		game_loop = setInterval(paint, 60);
+		game_loop = setInterval(paint, game_speed);
 	}
 	init();
 	
@@ -118,6 +121,9 @@ $(document).ready(function(){
 			score++;
 			//Create new food
 			create_food();
+			// increase speed
+			clearInterval(game_loop);
+			game_loop = setInterval(paint, game_speed--);
 		}
 		else
 		{
