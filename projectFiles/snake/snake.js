@@ -11,6 +11,7 @@ $(document).ready(function(){
 	var food;
 	var score;
 	var game_speed;
+	var allowMovement = true;
 	
 	//Lets create the snake(s) now
 	var snake_array; //an array of cells to make up the snake
@@ -146,6 +147,8 @@ $(document).ready(function(){
 		//Lets paint the score
 		var score_text = "Score: " + score;
 		ctx.fillText(score_text, 5, h-5);
+
+		allowMovement = true;
 	}
 	
 	//Lets first create a generic function to paint cells
@@ -180,13 +183,17 @@ $(document).ready(function(){
 	
 	//Lets add the keyboard controls now
 	$(document).keydown(function(e){
-		var key = e.which;
-		//We will add another clause to prevent reverse gear
-		if(key == "37" && d != "right") d = "left";
-		else if(key == "38" && d != "down") d = "up";
-		else if(key == "39" && d != "left") d = "right";
-		else if(key == "40" && d != "up") d = "down";
-		//The snake is now keyboard controllable
+		if (allowMovement)
+		{
+			var key = e.which;
+			//We will add another clause to prevent reverse gear
+			if(key == "37" && d != "right") d = "left";
+			else if(key == "38" && d != "down") d = "up";
+			else if(key == "39" && d != "left") d = "right";
+			else if(key == "40" && d != "up") d = "down";
+			//The snake is now keyboard controllable
+			allowMovement = false;
+		}
 	})
 	
 	
