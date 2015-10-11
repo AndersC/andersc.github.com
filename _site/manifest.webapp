@@ -1,0 +1,16 @@
+{
+  "version": "0.2",
+  "name": "AndersC",
+  "description": "Snake for Firefox OS",
+  "launch_path": "/",
+  "icons": {
+    "128": "img/icon-128.png"
+  },
+  "developer": {
+    "name": "Anders C @ TG",
+    "url": "andersc.github.com"
+  },
+  "installs_allowed_from": ["*"],
+  "locales": {},
+  "default_locale": "en"
+}

@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "Test Post!"
+date:   2015-10-11 18:00:00
+categories: test post
+---
+This is a test post, why did you click it?

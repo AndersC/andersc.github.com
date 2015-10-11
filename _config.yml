@@ -1,0 +1,11 @@
+# Site settings
+title: ABlog
+description: > # this means to ignore newlines until "baseurl:"
+  A blog with short articles on seemingly random topics.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+twitter_username: ACandasamy
+github_username: AndersCan
+
+# Build settings
+markdown: kramdown
